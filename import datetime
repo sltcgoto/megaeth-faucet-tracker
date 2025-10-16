@@ -1,0 +1,7 @@
+import datetime, csv
+
+now = datetime.datetime.utcnow().isoformat()
+with open("faucet_log.csv", "a", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow([now, "0xYourFakeTxHashHere", "N/A", "N/A"])
+print("Faucet claim logged:", now)
